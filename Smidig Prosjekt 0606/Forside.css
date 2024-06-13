@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Adjust height */
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    height: 70%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header .home-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+
+h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.intro ul {
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+    font-size: 25px;
+}
+
+.intro ul li {
+    margin-bottom: 10px;
+}
+
+.continue-btn {
+    font-family: Arial, sans-serif;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    width: 200px;
+    height: 80px;
+    margin-top: 100px;
+    margin-right: 10px;
+}
+
+
+
+.language-container {
+    background-color: #d3d3d3; 
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block; 
+    border-radius: 10px;
+    
+    margin-left: 50%;
+    translate: -52.5% 0%;
+    
+    
+
+    margin-top: 5px;
+}
+
+.language {
+    margin: 0;
+}
+
+.lang-btn, .audio-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.lang-btn img, .audio-btn img {
+    width: 40px;
+    height: 40px;
+} 
+
+
+
+.BFlag {
+    height: 30px;
+    width: 30px;
+}
+
+.NFlag {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+}
+
+.note {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.note p {
+    font-size: 14px;
+    color: #007bff;
+}

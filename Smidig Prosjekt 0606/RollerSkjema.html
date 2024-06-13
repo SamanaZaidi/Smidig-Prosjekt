@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilitetsregisteret Roller</title>
+    <link rel="stylesheet" href="RollerSkjema.css">
+</head>
+<body>
+    <header>
+        <h1 id="header-title">Habilitetsregisteret</h1>
+        
+        <div >
+            <a href="Forside.html">
+                <img src="Bilder/Home.png" alt="Home" class="home-icon">
+            </a>
+            <a href="profile.html">
+                <div class="profile-icon">
+                    <img src="Bilder/profileimage.webp" alt="profile">
+                </div>
+
+            </a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h2 id="subheader-title">Roller</h2>
+        <form id="rollerForm">
+            <div class="form-group">
+                <label for="land" id="label-land">LAND</label>
+                <select id="land" name="land">
+                    <option value="">Velg land</option>
+                    <option value="us">Norway</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="orgNavn" id="label-orgNavn">NAVN PÅ ORGANISASJON*</label>
+                <input type="text" id="orgNavn" name="orgNavn" required>
+            </div>
+            <div class="form-group">
+                <label for="orgNummer" id="label-orgNummer">ORGANISASJONNUMMER*</label>
+                <input type="text" id="orgNummer" name="orgNummer" required>
+            </div>
+            <div class="form-group">
+                <label for="rolleType" id="label-rolleType">Type Rolle</label>
+                <select id="rolleType" name="rolleType">
+                    <option value="">Velg rolle</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rolleTittel" id="label-rolleTittel">Tittel på rolle</label>
+                <input type="text" id="rolleTittel" name="rolleTittel">
+            </div>
+            <div class="form-group">
+                <label for="postnr" id="label-postnr">Postnr</label>
+                <input type="text" id="postnr" name="postnr">
+            </div>
+            <div class="form-group">
+                <label for="poststed" id="label-poststed">Poststed</label>
+                <input type="text" id="poststed" name="poststed">
+            </div>
+            <div class="form-group">
+                <label for="honorar" id="label-honorar">Månedlig honorar (NOK)</label>
+                <input type="number" id="honorar" name="honorar">
+            </div>
+            <div class="form-group">
+                <label for="forbruk" id="label-forbruk">Månedlig forbruk</label>
+                <input type="number" id="forbruk" name="forbruk">
+            </div>
+            <div class="form-group">
+                <label for="posisjonFra" id="label-posisjonFra">Posisjon fra (ikke påkrevd)</label>
+                <input type="date" id="posisjonFra" name="posisjonFra">
+            </div>
+            <div class="form-group">
+                <label for="posisjonTil" id="label-posisjonTil">Posisjon til (ikke påkrevd)</label>
+                <input type="date" id="posisjonTil" name="posisjonTil">
+            </div>
+            <div class="form-group">
+                <label for="kommentarer" id="label-kommentarer">Eventuelle Kommentarer</label>
+                <textarea id="kommentarer" name="kommentarer"></textarea>
+            </div>
+            <div class="buttons">
+                <a href="Roller.html">
+                    <button type="button" class="back-button" onclick="goBack()">Tilbake</button>
+                </a>
+                <a href="Roller.html">
+                    <button type="button" class="cancel-button">Avbryt</button>
+                </a>
+                
+                <button type="button" class="submit-button" id="submit-btn">Legg til eksisterende eierinteresse</button>
+
+                <a href="rollerkvittering.html">
+                    <button type="button" class="submit-button" style="margin-right: 0px;">Neste</button>
+                </a>
+            </div>
+        </form>
+        <div class="footer">
+            <div class="language-container">
+                <button class="lang-btn"><img src="Bilder/BFlag.png" alt="English"></button>
+                <button class="lang-btn"><img src="Bilder/NFlag.png" alt="Norwegian"></button>
+                <button class="audio-btn"><img src="Bilder/Speaker.png" alt="Speaker"></button>
+            </div>
+            <img src="Bilder/Chat.png" alt="Chat" class="chat-icon">
+        </div>
+    
+    
+    <script>
+function goBack() {
+    window.history.back();
+}
+
+function changeLanguage(lang) {
+    const elements = {
+        'header-title': {
+            'en': 'Conflict of Interest Register',
+            'no': 'Habilitetsregisteret'
+        },
+        'subheader-title': {
+            'en': 'Roles',
+            'no': 'Roller'
+        },
+        'label-land': {
+            'en': 'COUNTRY',
+            'no': 'LAND'
+        },
+        'label-orgNavn': {
+            'en': 'ORGANIZATION NAME*',
+            'no': 'NAVN PÅ ORGANISASJON*'
+        },
+        'label-orgNummer': {
+            'en': 'ORGANIZATION NUMBER*',
+            'no': 'ORGANISASJONNUMMER*'
+        },
+        'label-rolleType': {
+            'en': 'Role Type',
+            'no': 'Type Rolle'
+        },
+        'label-rolleTittel': {
+            'en': 'Role Title',
+            'no': 'Tittel på rolle'
+        },
+        'label-postnr': {
+            'en': 'Postal Code',
+            'no': 'Postnr'
+        },
+        'label-poststed': {
+            'en': 'City',
+            'no': 'Poststed'
+        },
+        'label-honorar': {
+            'en': 'Monthly Fee (NOK)',
+            'no': 'Månedlig honorar (NOK)'
+        },
+        'label-forbruk': {
+            'en': 'Monthly Expenditure',
+            'no': 'Månedlig forbruk'
+        },
+        'label-posisjonFra': {
+            'en': 'Position From (not required)',
+            'no': 'Posisjon fra (ikke påkrevd)'
+        },
+        'label-posisjonTil': {
+            'en': 'Position To (not required)',
+            'no': 'Posisjon til (ikke påkrevd)'
+        },
+        'label-kommentarer': {
+            'en': 'Comments',
+            'no': 'Eventuelle Kommentarer'
+        }
+    };
+
+    for (const [key, translations] of Object.entries(elements)) {
+        document.getElementById(key).textContent = translations[lang];
+    }
+
+    document.querySelector('.back-button').textContent = lang === 'en' ? 'Back' : 'Tilbake';
+    document.querySelector('.cancel-button').textContent = lang === 'en' ? 'Cancel' : 'Avbryt';
+    document.querySelector('.submit-button').textContent = lang === 'en' ? 'Add Existing Ownership Interest' : 'Legg til eksisterende eierinteresse';
+}
+
+function toggleSound() {
+    // Implement sound toggle logic here
+    alert('Sound toggled');
+}
+
+
+////////////////////////////////////////////////////////////////////////
+
+
+
+function addItem(){
+
+// Bruker 2 felt som test av proto:
+// Navn på org
+// Nummer på org
+
+var list_index = localStorage.getItem("list_index_roller");
+list_index++
+localStorage.setItem("list_index_roller", (list_index));
+
+
+//endre etter hvilket skjema (også i linket html dokument)
+var orgName_key = `orgName_roller_${localStorage.getItem("list_index_roller")}`;
+var orgNum_key = `orgNum_roller_${localStorage.getItem("list_index_roller")}`;
+
+//                                                            Endre dette også
+localStorage.setItem(`${orgName_key}`, document.getElementById("orgNavn").value)
+localStorage.setItem(`${orgNum_key}`, document.getElementById("orgNummer").value)
+
+}
+
+//                     legg til en knapp id
+document.getElementById("submit-btn").onclick = function(){
+    event.preventDefault();
+    addItem();
+    alert('Form submitted');
+
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+var spraakOgLydKnapper = document.getElementsByClassName("language-container")[0].onclick = function(){
+            alert(`Denne funksjonen fungerer ikke i denne prototypen.
+
+                    Disse knappen vil kunne:
+                    - Endre på språk
+                    - Skru på tale evene for svaksynte
+                    `);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilitetsregisteret</title>
+    <link rel="stylesheet" href="Logreg.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Habilitetsregisteret</h1>
+        <div class="main-container">
+            <div class="buttons">
+                <button class="register"><a href="Register.html">Registrer deg</button></a>
+                <a href="Login.html">
+                <button class="login">
+                Logg inn
+                </button>
+                </a>
+               
+            </div>
+            <div class="language-container">
+              
+                    <button class="lang-btn"><img src="Bilder/BFlag.png" alt="English"></button>
+                    <button class="lang-btn"><img src="Bilder/NFlag.png" alt="Norwegian"></button>
+                    <button class="audio-btn"><img src="Bilder/Speaker.png" alt="Audio"></button>
+                </div>
+        
+           <a href="Forside.html">
+            <button class="back">Tilbake</button>
+        </a>
+        </div>
+        </div>
+    </div>
+    <div class="home-icon">
+        <a href="Forside.html">
+            <img src="Bilder/Home.png" alt="Home" class="home-icon">
+        </a>
+    </div>
+
+    <script>
+        var chatBtn = document.getElementsByClassName("chat-icon")[0].onclick = function(){
+            alert(`Denne funksjonen fungerer ikke i denne prototypen.
+
+                    Denne knappen vil åpne tjenester som kan være til nytte som:
+                    - Online chat
+                    - FAQ
+                    `);
+        };
+        var spraakOgLydKnapper = document.getElementsByClassName("language-container")[0].onclick = function(){
+            alert(`Denne funksjonen fungerer ikke i denne prototypen.
+
+                    Disse knappen vil kunne:
+                    - Endre på språk
+                    - Skru på tale evene for svaksynte
+                    `);
+        }
+    </script>
+</body>
+</html>

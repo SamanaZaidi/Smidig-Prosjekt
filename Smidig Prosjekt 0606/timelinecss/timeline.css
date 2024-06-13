@@ -1,0 +1,51 @@
+
+.timeline-container {
+    font-size: 16px;
+    display: flex;
+    top: 40px;
+    position: absolute;    
+    margin: auto;
+    padding: 10px;
+    
+    
+    color: white;
+    gap: 40px;
+    }
+    
+.timeline-div {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    width: 160px;
+    height: auto;
+    text-decoration: none;   
+
+    /*
+    background-color: #0056b3;
+    background-color: #92bbe7;
+    */
+
+    background-color: #c6d8eb;
+    border-radius: 5px;
+    color: white;    
+}
+    
+.timeline-line{
+    position: absolute;
+    background-color: #c6d8eb;
+    translate: 0%  -50% ;
+    top: 50%;
+    height: 10px;
+    width: 760px;
+    z-index: -1;
+    
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+

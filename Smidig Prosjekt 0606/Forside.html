@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilitetsregisteret</title>
+    <link rel="stylesheet" href="Forside.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Habilitetsregisteret</h1>
+        </header>
+        <main>
+            <div class="intro">
+                <h2>Hvordan fungerer registreringen?</h2>
+                <ul>
+                    <li><strong>Innsending av informasjon:</strong> De som er pålagt å registrere seg, må sende inn relevant informasjon om sine personlige og økonomiske interesser. Dette inkluderer informasjon om familieforhold, eierinteresser, og andre relasjoner som kan påvirke habiliteten.</li>
+                    <li><strong>Gjennomgang og oppdatering:</strong> Informasjonen blir regelmessig gjennomgått og oppdatert for å sikre at registeret er korrekt og oppdatert.</li>
+                    <li><strong>Innsyn og anonymitet:</strong> Mens registeret er tilgjengelig for offentligheten, blir sensitive personopplysninger håndtert med streng konfidensialitet for å beskytte personvernet.</li>
+                </ul>
+                <a href="Logreg.html">
+                    <button type="button" class="continue-btn">Fortsett</button>
+                </a>
+            </div>
+
+            <div class="language-container">
+                <div class="language">
+                    <button class="lang-btn"><img src="Bilder/BFlag.png" alt="English" class="BFlag"></button>
+                    <button class="lang-btn"><img src="Bilder/NFlag.png" alt="Norwegian" class="NFlag"></button>
+                    <button class="audio-btn"><img src="Bilder/Speaker.png" alt="Audio" class=""></button>
+                </div>
+        </main>
+    </div>
+    <script>
+        
+        //document.addEventListener('DOMContentLoaded', () => {
+          //  document.querySelector('.continue-btn')?.addEventListener('click', () => {
+                // Continue button click
+            //    alert('Continuing to the next step!');
+            // });
+
+            document.querySelector('.audio-btn').addEventListener('click', () => {
+                alert('Audio feature!');
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    alert('Switching language!');
+                });
+            });
+        //}); 
+
+    </script> 
+</body>
+</html>

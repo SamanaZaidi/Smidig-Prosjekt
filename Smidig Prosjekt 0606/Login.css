@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Adjust height */
+}
+
+a:visited {
+    color: inherit; 
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.container {
+    width: 1000px; /* Adjusted */
+    
+    margin: auto;
+    padding: 10px; /* Adjusted */
+    background-color: #ffffff;
+    box-shadow: 0 0 17px rgba(0, 0, 0, 0.1); /* Adjusted */
+    text-align: center;
+    border-radius: 17px; /* Adjusted */
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 40.8px; /* Adjusted */
+    margin: 34px; /* Adjusted */
+}
+
+.home-icon {
+    position: absolute;
+    top: 17.85px; /* Adjusted */
+    right: 25.5px; /* Adjusted */
+}
+
+header .home-icon {
+    width: 68px; /* Adjusted */
+    height: 68px; /* Adjusted */
+}
+
+.login-form {
+    margin-top: 102px; /* Adjusted */
+}
+
+.login-form input {
+    display: block;
+    width: 510px; /* Adjusted */
+    margin: 17px auto; /* Adjusted */
+    padding: 17px; /* Adjusted */
+    font-size: 27.2px; /* Adjusted */
+    border: 1px solid #ccc;
+    border-radius: 8.5px; /* Adjusted */
+    margin-bottom: 34px; /* Adjusted */
+}
+
+.login-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 25.5px 51px; /* Adjusted */
+    border-radius: 8.5px; /* Adjusted */
+    cursor: pointer;
+    font-size: 27.2px; /* Adjusted */
+    width: 340px; /* Adjusted */
+    margin: 17px auto; /* Adjusted */
+    display: block;
+    margin-top: 17px; /* Adjusted */
+}
+
+.language-audio-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 17px; /* Adjusted */
+    border-radius: 17px; /* Adjusted */
+    margin: 34px auto; /* Adjusted */
+    width: fit-content;
+}
+
+.lang-btn, .audio-btn {
+    background: none;
+    border: none;
+    width: 102px; /* Adjusted */
+    height: 85px; /* Adjusted */
+    margin: 0 17px; /* Adjusted */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang-btn img, .audio-btn img {
+    width: 100%;
+    height: 100%;
+}
+
+.back-btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 17px 34px; /* Adjusted */
+    border-radius: 8.5px; /* Adjusted */
+    cursor: pointer;
+    font-size: 27.2px; /* Adjusted */
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 34px; /* Adjusted */
+    margin-right: 255%; /* Adjusted */
+}
+
+.Chat-icon {
+    position: fixed;
+    bottom: 34px; /* Adjusted */
+    right: 34px; /* Adjusted */
+}
+
+.Chat {
+    width: 85px; /* Adjusted */
+    height: 85px; /* Adjusted */
+}

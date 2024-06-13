@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrer deg</title>
+    <link rel="stylesheet" href="Register.css">
+
+</head>
+
+<body>
+    <h1 class="title">Habilitetsregisteret</h1>
+    <div class="container">
+        <div class="main-container">
+            <form>
+                <input id="fornavn" type="text" name="fornavn" placeholder="Fornavn">
+                <input id="etternavn" type="text" name="etternavn" placeholder="Etternavn">
+                <input id="email" type="email" name="email" placeholder="Email">
+                <input id="mobilnr" type="text" name="mobilnr" placeholder="Mobilnr">
+            </form>
+            <a href="Eierinteresser.html">
+                <button id="register-btn" type="submit" class="submit">Registrer</button>
+                </a>
+            <div class="language-container">
+                <div class="language">
+                    <button class="lang-btn"><img src="Bilder/BFlag.png" alt="English"></button>
+                    <button class="lang-btn"><img src="Bilder/NFlag.png" alt="Norwegian"></button>
+                    <button class="audio-btn"><img src="Bilder/Speaker.png" alt="Audio"></button>
+                </div>
+            </div>
+            <a href="Logreg.html">
+                <button class="back">Tilbake</button>
+            </a>
+            <div class="chat-icon">
+                <img src="Bilder/Chat.png" alt="Chat">
+            </div>
+        </div>
+    </div>
+    <div class="home-icon">
+        <a href="Forside.html">
+            <img src="Bilder/Home.png" alt="Home" class="home-icon">
+        </a>
+    </div>
+
+    <script>
+        var registerBtn = document.getElementById("register-btn");
+        var fornavnField = document.getElementById("fornavn");
+        var etternavnField = document.getElementById("etternavn");
+        var emailField = document.getElementById("email");
+        var mobilnrField = document.getElementById("mobilnr");
+        
+        //localStorage.clear();
+        
+        registerBtn.onclick = function(){
+            localStorage.setItem("fornavn", fornavnField.value);
+            localStorage.setItem("etternavn", etternavnField.value);
+            localStorage.setItem("email", emailField.value);
+            localStorage.setItem("mobilnr", mobilnrField.value);
+        }
+
+        var chatBtn = document.getElementsByClassName("chat-icon")[0].onclick = function(){
+            alert(`Denne funksjonen fungerer ikke i denne prototypen.
+
+                    Denne knappen vil åpne tjenester som kan være til nytte som:
+                    - Online chat
+                    - FAQ
+                    `);
+        };
+        var spraakOgLydKnapper = document.getElementsByClassName("language-container")[0].onclick = function(){
+            alert(`Denne funksjonen fungerer ikke i denne prototypen.
+
+                    Disse knappen vil kunne:
+                    - Endre på språk
+                    - Skru på tale evene for svaksynte
+                    `);
+        }
+    </script>
+</body>
+</html>

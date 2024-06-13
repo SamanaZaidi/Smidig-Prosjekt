@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height */
+    margin: 0;
+    background-image: url('Bilder/annet.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 24px; /* Adjusted */
+    left: 24px; /* Adjusted */
+    font-size: 40px; /* Adjusted */
+    margin: 0;
+}
+
+.container {
+    width: 1800px; /* Adjusted */
+    height: 624px; /* Adjusted */
+    background-color: #ffffff;
+    padding: 24px; /* Adjusted */
+    border-radius: 12px; /* Adjusted */
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1); /* Adjusted */
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitle-container {
+    width: 100%;
+    margin-bottom: 24px; /* Adjusted */
+    text-align: center;
+    margin-right: 1200px; /* Adjusted */
+}
+
+.subtitle {
+    font-size: 48px; /* Adjusted */
+    margin: 24px 0; /* Adjusted */
+    margin-right: 440px; /* Adjusted */
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px; /* Adjusted */
+    margin-right: 80px; /* Adjusted */
+}
+
+.tab {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 18px 36px; /* Adjusted */
+    cursor: pointer;
+    border-radius: 6px; /* Adjusted */
+    font-size: 18px; /* Adjusted */
+    margin: 0 6px; /* Adjusted */
+}
+
+.content {
+    width: 100%;
+    margin-bottom: 24px; /* Adjusted */
+    display: flex;
+    align-items: flex-start; 
+    position: relative;
+}
+
+.add-annet {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 24px; /* Adjusted */
+    cursor: pointer;
+    border-radius: 6px; /* Adjusted */
+    font-size: 18px; /* Adjusted */
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.annet-list {
+    width: 1200px; /* Adjusted */
+    height: 180px; /* Adjusted */
+    padding: 12px; /* Adjusted */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Adjusted */
+    font-size: 18px; /* Adjusted */
+    box-sizing: border-box;
+    margin-top: 12px; /* Adjusted */
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -12px; /* Adjusted */
+    position: relative;
+}
+
+.back {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 12px 24px; /* Adjusted */
+    cursor: pointer;
+    border-radius: 6px; /* Adjusted */
+    font-size: 18px; /* Adjusted */
+    position: absolute;
+    top: 36px; /* Adjusted */
+}
+
+.next {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 24px; /* Adjusted */
+    cursor: pointer;
+    border-radius: 6px; /* Adjusted */
+    font-size: 18px; /* Adjusted */
+    margin-top: 36px; /* Adjusted */
+}
+
+.language-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px; /* Adjusted */
+    padding: 12px; /* Adjusted */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Adjusted */
+    background-color: #d3d3d3; 
+    border-radius: 12px; /* Adjusted */
+}
+
+.lang-btn, .audio-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 12px; /* Adjusted */
+    border-radius: 50%; 
+    width: 60px; /* Adjusted */
+    height: 60px; /* Adjusted */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Adjusted */
+}
+
+.lang-btn img, .audio-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    display: block;
+}
+.home-icon {
+    position: absolute;
+    top: 12px; /* Adjusted */
+    right: 18px; /* Adjusted */
+}
+
+.home-icon img {
+    width: 48px; /* Adjusted */
+    height: 48px; /* Adjusted */
+}
+
+.chat-icon {
+    position: absolute;
+    bottom: 24px; /* Adjusted */
+    right: 24px; /* Adjusted */
+}
+
+.chat-icon img {
+    width: 60px; /* Adjusted */
+    height: 60px; /* Adjusted */
+}
+.profile-icon {
+    position: absolute;
+    top: 18px; /* Adjusted */
+    right: 96px; /* Adjusted */
+}
+
+.profile-icon img {
+    width: 60px; /* Adjusted */
+    height: 60px; /* Adjusted */
+}
+

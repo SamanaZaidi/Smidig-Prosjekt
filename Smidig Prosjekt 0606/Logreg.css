@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+    position: relative;
+}
+
+.container {
+    text-align: center;
+}
+
+
+.title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 40px;
+    margin: 0;
+}
+
+
+.main-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800px; /* Ajusted */ 
+    padding: 34px; /* Ajusted */
+    border-radius: 17px; /* Ajusted */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    height: 600px;
+}
+
+.buttons {
+    margin-top: 150px;
+}
+
+button {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.register {
+    background-color: #0056b3;
+    color: white;
+    width: 500px;
+    height: 120px;
+    padding: 25.5px; /* Ajusted */
+    font-size: 30px; /* Ajusted */
+    border-radius: 8.5px;
+}
+
+button.login {
+    background-color: #28a745;
+    color: white;
+    width: 500px;
+    height: 120px;
+    padding: 25.5px; /* Ajusted */
+    font-size: 30px; /* Ajusted */
+    border-radius: 8.5px;
+    
+}
+
+a:visited {
+    color: inherit; 
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.language-container {
+    margin-top: 10px;
+    width: 220px; 
+    padding: 10px;
+    background-color: #d3d3d3; 
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang-btn, .audio-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: -5px;
+
+}
+
+.lang-btn img, .audio-btn img {
+    width: 50px;
+    height: 50px;
+}
+
+button.back {
+    background-color: #0056b3;
+    color: white;
+    width: 187px; /* Ajusted */
+    margin-top: 34px; /* Ajusted */
+    padding: 25.5px; /* Ajusted */
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    border-radius: 8.5px; /* Ajusted */
+    font-size: 30.6px; /* Ajusted */ 
+}
+
+.home-icon {
+    position: absolute;
+    top: 10.5px;
+    right: 15px;
+}
+
+.home-icon img {
+    width: 68px;
+    height: 68px;
+}
+.login-btn{
+
+    color: white;
+
+}

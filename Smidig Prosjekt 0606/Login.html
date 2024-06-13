@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilitetsregisteret - Logg inn</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <header>
+        <h1 data-translate="title">Habilitetsregisteret</h1>
+        <div class="home-icon">
+            <a href="Forside.html">
+                <img src="Bilder/Home.png" alt="Home" class="home-icon" >
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        
+        <main>
+            <form class="login-form">
+                <input type="email" placeholder="Email" data-translate="email-placeholder">
+                <input type="password" placeholder="Passord" data-translate="password-placeholder">
+            </form>
+            <a href="Eierinteresser.html">
+                <button type="submit" class="login-btn" data-translate="login">Logg inn</button>
+            </a>
+            <div class="language-audio-box">
+                <button type="button" class="lang-btn" id="lang-en">
+                    <img src="Bilder/BFlag.png" alt="English">
+                </button>
+                <button type="button" class="lang-btn" id="lang-no">
+                    <img src="Bilder/NFlag.png" alt="Norwegian">
+                </button>
+                <button type="button" class="audio-btn" id="audio">
+                    <img src="Bilder/Speaker.png" alt="Audio">
+                </button>
+                
+            </div>
+            <a href="Logreg.html">
+                <p class="back-btn">Tilbake</p>
+            </a>
+        </main>
+    </div>
+    <script>
+
+const translations = {
+    en: {
+        title: "Impartiality Register",
+        "email-placeholder": "Email",
+        "password-placeholder": "Password",
+        login: "Login",
+        back: "Back"
+    },
+    no: {
+        title: "Habilitetsregisteret",
+        "email-placeholder": "Email",
+        "password-placeholder": "Passord",
+        login: "Logg inn",
+        back: "Tilbake"
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    const languageButtons = document.querySelectorAll('.lang-btn');
+    const audioButton = document.getElementById('audio');
+    const inputs = document.querySelectorAll('.login-form input');
+
+    languageButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.id.split('-')[1];
+            switchLanguage(lang);
+        });
+    });
+
+    audioButton.addEventListener('click', () => {
+        alert('Audio feature!');
+    });
+
+    function switchLanguage(lang) {
+        document.querySelectorAll('[data-translate]').forEach(el => {
+            const key = el.getAttribute('data-translate');
+            if (el.tagName.toLowerCase() === 'input') {
+                el.placeholder = translations[lang][key];
+            } else {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+    }
+});
+
+
+    </script>
+</body>
+</html>

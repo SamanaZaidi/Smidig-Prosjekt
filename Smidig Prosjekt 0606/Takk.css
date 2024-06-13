@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+    flex-direction: column; 
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+   
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header h1 {
+    font-size: 40px;
+    margin: 0;
+}
+.home-icon {
+    position: absolute;
+    top: 20.5px;
+    right: 20px;
+}
+
+.home-icon {
+    
+    width: 58px;
+    height: 58px;
+    margin-right: 50px; 
+}
+
+.container {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 800px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+    text-align: center;
+    margin-top: 100px; 
+    height: 500px;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.thumb-icon {
+    width: 200px;
+    height: 200px;
+}
+
+.content p {
+    font-size: 2.0em;
+    margin: 10px 0;
+}
+
+.logout-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.6em;
+    width: 200px;
+    height: 70px;
+}
+
+.logout-button:hover {
+    background-color: #218838;
+}
+
+.footer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    position: relative;
+}
+
+.footer-icons {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: auto;
+}
+
+.footer img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.footer img:last-child {
+    margin-right: 0;
+}
+
+.chat-icon {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.profile-icon {
+    position: absolute;
+    top: 15px;
+    right: 140px;
+}
+
+.profile-icon img {
+    width: 68px;
+    height: 68px;
+}

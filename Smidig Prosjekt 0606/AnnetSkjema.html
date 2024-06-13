@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilitetsregisteret</title>
+    <link rel="stylesheet" href="AnnetSkjema.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Habilitetsregisteret</h1>
+        <a href="Forside.html">
+            <img src="Bilder/Home.png" alt="Home" class="home-icon">
+        </a>
+        <a href="profile.html">
+            <div class="profile-icon">
+                <img src="Bilder/profileimage.webp" alt="profile">
+            </div>
+        </a>
+    </div>
+<div class="container">
+   
+        <h2 id="form-title">Annet</h2>
+        
+    <div class="form-container">
+        <form id="relations-form">
+            <div class="form-group">
+                <label for="firstName" class="label">Fornavn/Mellomnavn *</label>
+                <input type="text" id="firstName" name="firstName">
+                <span class="tooltip">?</span>
+            </div>
+            <div class="form-group">
+                <label for="lastName" class="label">Etternavn *</label>
+                <input type="text" id="lastName" name="lastName">
+                <span class="tooltip">?</span>
+            </div>
+            <div class="form-group">
+                <label for="address" class="label">Adresse</label>
+                <input type="text" id="address" name="address">
+                <span class="tooltip">?</span>
+            </div>
+            <div class="form-group">
+                <label for="postalCode" class="label">Postnr</label>
+                <input type="text" id="postalCode" name="postalCode">
+                <label for="city" class="label">Poststed</label>
+                <input type="text" id="city" name="city">
+            </div>
+            <div class="form-group">
+                <label for="relationType" class="label">Type</label>
+                <input type="text" id="relationType" name="relationType">
+                <span class="tooltip">?</span>
+            </div>
+            <div class="form-group">
+                <label for="monthlyUsage" class="label">Månedlig forbruk</label>
+                <input type="text" id="monthlyUsage" name="monthlyUsage">
+                <span class="tooltip">?</span>
+            </div>
+            <div class="form-group">
+                <label for="comments" class="label">Eventuelle kommentarer</label>
+                <textarea id="comments" name="comments"></textarea>
+            </div>
+            
+            <div class="form-buttons">
+
+                <a href="Annet.html">
+                    <button type="button" class="back-button" onclick="goBack()">Tilbake</button>
+                </a>
+
+                <a href="Annet.html">
+                    <button type="button" class="cancel-button">Avbryt</button>
+                </a>
+                
+                <button type="button" class="submit-button" id="submit-btn">Legg til eksisterende eierinteresse</button>
+            
+                <a href="annetkvittering.html">
+                    <button type="button" class="submit-button" style="margin-right: 0px;">Neste</button>
+                </a>
+            </div>
+        </form>
+    </div>
+    <div class="language-container">
+        <button class="lang-btn"><img src="Bilder/BFlag.png" alt="English"></button>
+        <button class="lang-btn"><img src="Bilder/NFlag.png" alt="Norwegian"></button>
+        <button class="audio-btn"><img src="Bilder/Speaker.png" alt="Audio"></button>
+    </div>
+    
+    <img src="Bilder/Chat.png" alt="Chat" class="chat-icon">
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const tooltips = document.querySelectorAll('.tooltip');
+    tooltips.forEach(tooltip => {
+        tooltip.addEventListener('click', () => {
+            alert('Info about this field');
+        });
+    });
+
+    const cancelButton = document.querySelector('.cancel-button');
+    cancelButton.addEventListener('click', () => {
+        document.getElementById('relations-form').reset();
+    });
+
+    const backButton = document.querySelector('.back-button');
+    backButton.addEventListener('click', () => {
+        window.history.back();
+    });
+
+    const form = document.getElementById('relations-form');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert('Form submitted');
+    });
+
+    const translations = {
+        no: {
+            formTitle: "Annet",
+            firstName: "Fornavn/Mellomnavn",
+            lastName: "Etternavn",
+            address: "Adresse",
+            postalCode: "Postnr",
+            city: "Poststed",
+            relationType: "Type",
+            monthlyUsage: "Månedlig forbruk",
+            comments: "Eventuelle kommentarer",
+            cancel: "Avbryt",
+            submit: "Legg til eksisterende eierinteresse",
+            back: "Tilbake"
+        },
+        en: {
+            formTitle: "Other",
+            firstName: "First Name/Middle Name",
+            lastName: "Last Name",
+            address: "Address",
+            postalCode: "Postal Code",
+            city: "City",
+            relationType: "Relation Type",
+            monthlyUsage: "Monthly Usage",
+            comments: "Comments",
+            cancel: "Cancel",
+            submit: "Add Existing Ownership Interest",
+            back: "Back"
+        }
+    };
+
+    function switchLanguage(lang) {
+        document.getElementById('form-title').innerText = translations[lang].formTitle;
+        document.querySelector('label[for="firstName"]').innerText = translations[lang].firstName;
+        document.querySelector('label[for="lastName"]').innerText = translations[lang].lastName;
+        document.querySelector('label[for="address"]').innerText = translations[lang].address;
+        document.querySelector('label[for="postalCode"]').innerText = translations[lang].postalCode;
+        document.querySelector('label[for="city"]').innerText = translations[lang].city;
+        document.querySelector('label[for="relationType"]').innerText = translations[lang].relationType;
+        document.querySelector('label[for="monthlyUsage"]').innerText = translations[lang].monthlyUsage;
+        document.querySelector('label[for="comments"]').innerText = translations[lang].comments;
+        document.querySelector('.cancel-button').innerText = translations[lang].cancel;
+        document.querySelector('.submit-button').innerText = translations[lang].submit;
+        document.querySelector('.back-button').innerText = translations[lang].back;
+    }
+
+    document.getElementById('english-flag').addEventListener('click', () => {
+        switchLanguage('en');
+    });
+
+    document.getElementById('norwegian-flag').addEventListener('click', () => {
+        switchLanguage('no');
+    });
+
+    document.getElementById('speaker-icon').addEventListener('click', () => {
+        alert('Playing audio description');
+    });
+});
+
+////////////////////////////////////////////////////////////////////////
+
+
+
+function addItem(){
+
+// Bruker 2 felt som test av proto:
+// Navn på org
+// Nummer på org
+
+var list_index = localStorage.getItem("list_index_annet");
+list_index++
+localStorage.setItem("list_index_annet", (list_index));
+
+
+//endre etter hvilket skjema (også i linket html dokument)
+var firstName = `firstName_annet_${localStorage.getItem("list_index_annet")}`;
+var lastName = `lastName_annet_${localStorage.getItem("list_index_annet")}`;
+
+//                                                            Endre dette også
+localStorage.setItem(`${firstName}`, document.getElementById("firstName").value)
+localStorage.setItem(`${lastName}`, document.getElementById("lastName").value)
+
+}
+
+//                     legg til en knapp id
+document.getElementById("submit-btn").onclick = function(){
+    event.preventDefault();
+    addItem();
+    alert('Form submitted');
+
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+</script>
+</body>
+</html>

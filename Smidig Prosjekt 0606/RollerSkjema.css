@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('Bilder/roller.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Adjust height */
+}
+
+.container {
+    max-width: 900px;
+    margin: 150px auto 20px; 
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+   
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    margin-right: 82%;
+    font-size: 40px;
+}
+h2 {
+    font-size: 30px;
+}
+header h2 {
+    font-size: 30px;
+    margin: 10px;
+}
+
+.home-icon{
+    position: absolute;
+    top: 20.5px;
+    right: 55px;
+
+}
+
+.home-icon{
+    width: 58px;
+    height: 58px;
+}
+
+form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form .form-group input,
+form .form-group select,
+form .form-group textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+form .buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.back-button {
+    background-color: #007bff;
+    height: 50px;
+}
+
+.cancel-button {
+    background-color: #dc3545;
+    margin-left: 40%;
+    height: 50px;
+}
+
+.submit-button {
+    background-color: #28a745;
+    height: 50px;
+}
+
+.buttons button:hover {
+    opacity: 0.9;
+}
+
+.chat-icon {
+    width: 48px; 
+    height: 48px; 
+    margin-left: 800px;
+}
+.footer {
+    margin-top: 27.2px; /* 16 * 1.7 */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    
+}
+
+.language-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+    background-color: #d3d3d3; 
+    border-radius: 10px; 
+}
+
+.lang-btn, .audio-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px; 
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.lang-btn img, .audio-btn img {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.language-sound-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.language-sound-buttons button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.language-sound-buttons button img {
+    width: 30px;
+    height: 30px;
+}
+
+.language-sound-buttons button:hover img {
+    filter: brightness(0.8);
+}
+
+.profile-icon {
+    position: absolute;
+    margin-top: -46px;
+    right: 120px;
+    top: 61px;
+
+}
+
+.profile-icon img {
+    width: 68px;
+    height: 68px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EierinteresseKvittering</title>
+    <link rel="stylesheet" href="EierinteresseKvittering.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Habilitetsregisteret</h1>
+        <a href="Forside.html">
+            <img src="Bilder/Home.png" alt="Home" class="home-icon">
+        </a>
+        <a href="profile.html">
+            <div class="profile-icon">
+                <img src="Bilder/profileimage.webp" alt="profile">
+            </div>
+        </a>
+    </header>
+    <div class="container">
+        <h2>Se gjennom Eierinteresse</h2>
+        <div class="receipt">
+            <div class="receipt-item">Land: <span>Norge</span></div>
+            <div class="receipt-item">Navn: <span>Eksempel AS</span></div>
+            <div class="receipt-item">Organisasjonsnummer: <span>123456789</span></div>
+            <div class="receipt-item">Børsnotert: <span>Ja</span></div>
+            <div class="receipt-item">Aksjeklasse: <span>A</span></div>
+            <div class="receipt-item">Antall aksjer: <span>1000</span></div>
+            <div class="receipt-item">Status drift: <span>Aktiv</span></div>
+            <div class="receipt-item">Eierskap fra: <span>01.01.2020</span></div>
+            <div class="receipt-item">Eierskap til: <span>31.12.2020</span></div>
+            <div class="receipt-item">Eventuell kommentar: <span>Ingen kommentarer</span></div>
+        </div>
+        <div class="buttons">
+            <a href="EierinteresseSkjema.html">
+                <button type="button">Tilbake</button>
+            </a>
+            <a href="Eierinteresser.html">
+                <button type="button">Godkjenn</button>
+            </a>
+        </div>
+        <div class="footer">
+            <div class="language-container">
+                <button class="lang-btn"><img src="Bilder/BFlag.png" alt="English"></button>
+                <button class="lang-btn"><img src="Bilder/NFlag.png" alt="Norwegian"></button>
+                <button class="audio-btn"><img src="Bilder/Speaker.png" alt="Speaker"></button>
+            </div>
+            <img src="Bilder/Chat.png" alt="Chat" class="chat-icon">
+        </div>
+    </div>
+    <script>
+        var spraakOgLydKnapper = document.getElementsByClassName("language-container")[0].onclick = function(){
+            alert(`Denne funksjonen fungerer ikke i denne prototypen.
+
+                    Disse knappen vil kunne:
+                    - Endre på språk
+                    - Skru på tale evene for svaksynte
+                    `);
+        }
+    </script>
+</body>
+</html>
+

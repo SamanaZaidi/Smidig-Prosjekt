@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilitetsregisteret</title>
+    <link rel="stylesheet" href="Takk.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Habilitetsregisteret</h1>
+        <a href="Forside.html">
+            <img src="Bilder/Home.png" alt="Home" class="home-icon">
+        </a>
+        <a href="profile.html">
+            <div class="profile-icon">
+                <img src="Bilder/profileimage.webp" alt="profile">
+            </div>
+        </a>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <img src="Bilder/thumb.png" alt="Thumb Up" class="thumb-icon">
+            <p>Takk for at du oppdaterte Habilitetsregisteret</p>
+            <p>Ha en fin dag!</p>
+            <a href="Login.html">
+                <button class="logout-button">Logg ut</button>
+            </a>
+        </div>
+        <div class="footer">
+            <div class="footer-icons">
+                <img src="Bilder/BFlag.png" alt="English">
+                <img src="Bilder/NFlag.png" alt="Norwegian">
+                <img src="Bilder/Speaker.png" alt="Speaker">
+            </div>
+            <img src="Bilder/Chat.png" alt="Chat" class="chat-icon">
+        </div>
+    </div>
+    <script>
+        
+        var chatBtn = document.getElementsByClassName("chat-icon")[0].onclick = function(){
+            alert(`Denne funksjonen fungerer ikke i denne prototypen.
+
+                    Denne knappen vil åpne tjenester som kan være til nytte som:
+                    - Online chat
+                    - FAQ
+                    `);
+        };
+
+    </script>
+</body>
+</html>

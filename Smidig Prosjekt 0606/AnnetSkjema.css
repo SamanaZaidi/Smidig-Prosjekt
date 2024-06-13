@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('Bilder/annet.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+.header, .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+.header h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 30px;
+    text-align: center;
+}
+.header h1, .header h2, .footer button {
+    margin-top: -40px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group input[type="text"] {
+    width: calc(33.333% - 4px);
+    display: inline-block;
+    width: 100%;
+}
+.form-group .tooltip {
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.form-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cancel-button {
+    background-color: #ff6666;
+    color: white;
+    margin-left: 57%;
+    height: 50px;
+}
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    height: 50px;
+}
+.back-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+}
+.footer-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.footer-icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.chat-icon {
+    width: 48px; 
+    height: 48px; 
+    margin-left: 800px;
+}
+.home-icon{
+    position: absolute;
+    width: 58px; /* Adjusted */
+    height: 58px; /* Adjusted */
+    top: -25px; /* Adjusted */
+    left: 1830px; /* Adjusted */ 
+} 
+.language-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+    background-color: #d3d3d3; 
+    border-radius: 10px; 
+    width: 300px;
+    margin-left: 300px;
+}
+
+.lang-btn, .audio-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px; 
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.lang-btn img, .audio-btn img {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+.profile-icon {
+    position: absolute;
+    top: -30px; /* Adjusted */
+    left: 1735px; /* Adjusted */
+}
+
+.profile-icon img {
+    width: 68px; /* Adjusted */
+    height: 68px; /* Adjusted */
+}

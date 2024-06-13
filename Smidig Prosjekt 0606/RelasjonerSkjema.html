@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilitetsregisteret</title>
+    <link rel="stylesheet" href="RelasjonerSkjema.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Habilitetsregisteret</h1>
+        
+        <a href="Forside.html">
+            <img src="Bilder/Home.png" alt="Home" class="home-icon">
+        </a>
+
+        <div class="profile-icon">
+            <a href="profile.html">
+                <img src="Bilder/profileimage.webp" alt="profile">
+            </a>
+        </div>
+    </div>
+
+
+<div class="container">
+    <h2>Relasjoner</h2>
+    <div class="form-container">
+        <form id="relations-form">
+            <div class="form-group">
+                <label for="firstName">Fornavn/Mellomnavn *</label>
+                <input type="text" id="firstName" name="firstName">
+                <span class="tooltip">?</span>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Etternavn *</label>
+                <input type="text" id="lastName" name="lastName">
+                <span class="tooltip">?</span>
+            </div>
+            <div class="form-group">
+                <label for="address">Adresse</label>
+                <input type="text" id="address" name="address">
+                <span class="tooltip">?</span>
+            </div>
+            <div class="form-group">
+                <label for="postalCode">Postnr</label>
+                <input type="text" id="postalCode" name="postalCode">
+                <label for="city">Poststed</label>
+                <input type="text" id="city" name="city">
+            </div>
+            <div class="form-group">
+                <label for="birthDate">Fødselsdato</label>
+                <input type="text" id="birthDay" name="birthDay" placeholder="Dag">
+                <input type="text" id="birthMonth" name="birthMonth" placeholder="Måned">
+                <input type="text" id="birthYear" name="birthYear" placeholder="År">
+            </div>
+            <div class="form-group">
+                <label for="relationType">Type relasjon</label>
+                <input type="text" id="relationType" name="relationType">
+                <span class="tooltip">?</span>
+            </div>
+            <div class="form-group">
+                <label for="monthlyUsage">Månedlig forbruk</label>
+                <input type="text" id="monthlyUsage" name="monthlyUsage">
+                <span class="tooltip">?</span>
+            </div>
+            <div class="form-group">
+                <label for="comments">Eventuelle kommentarer</label>
+                <textarea id="comments" name="comments"></textarea>
+            </div>
+            <div class="form-buttons">
+                <a href="Relasjoner.html">
+                    <button type="button" class="back-button">Tilbake</button>
+                </a>
+                <a href="Relasjoner.html">
+                    <button type="button" class="cancel-button">Avbryt</button>
+                </a>
+                
+                <button type="button" class="submit-button" id="submit-btn">Legg til eksisterende eierinteresse</button>
+
+                <a href="relasjonerkvittering.html">
+                    <button type="button" class="submit-button" style="margin-right: 0px;">Neste</button>
+                </a>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="language-container">
+            <button class="lang-btn"><img src="Bilder/BFlag.png" alt="English"></button>
+            <button class="lang-btn"><img src="Bilder/NFlag.png" alt="Norwegian"></button>
+            <button class="audio-btn"><img src="Bilder/Speaker.png" alt="Speaker"></button>
+        </div>
+        <img src="Bilder/Chat.png" alt="Chat" class="chat-icon">
+    </div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tooltips = document.querySelectorAll('.tooltip');
+    tooltips.forEach(tooltip => {
+        tooltip.addEventListener('click', () => {
+            alert('Info about this field');
+        });
+    });
+
+    const cancelButton = document.querySelector('.cancel-button');
+    cancelButton.addEventListener('click', () => {
+        document.getElementById('relations-form').reset();
+    });
+
+    const backButton = document.querySelector('.back-button');
+    backButton.addEventListener('click', () => {
+        window.history.back();
+    });
+
+    // Language switch functionality
+    document.getElementById('english-flag').addEventListener('click', () => {
+        alert('Switching to English');
+    });
+
+    document.getElementById('norwegian-flag').addEventListener('click', () => {
+        alert('Switching to Norwegian');
+    });
+
+    // Speaker icon functionality
+    document.getElementById('speaker-icon').addEventListener('click', () => {
+        alert('Playing audio description');
+    });
+
+    document.getElementById("submit-btn").addEventListener('click', function(event) {
+        event.preventDefault();
+        addItem();
+        alert('Form submitted');
+    });
+});
+
+function addItem() {
+    let listIndex = localStorage.getItem("list_index_relasjon");
+    if (listIndex === null) {
+        listIndex = 1;
+    } else {
+        listIndex = parseInt(listIndex);
+        listIndex++;
+    }
+    localStorage.setItem("list_index_relasjon", listIndex);
+
+    const fornavnKey = `fornavn_relasjon_${listIndex}`;
+    const etternavnKey = `etternavn_relasjon_${listIndex}`;
+
+    localStorage.setItem(fornavnKey, document.getElementById("firstName").value);
+    localStorage.setItem(etternavnKey, document.getElementById("lastName").value);
+}
+
+
+</script>
+</body>
+</html>

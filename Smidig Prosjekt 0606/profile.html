@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilitetsregisteret</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Habilitetsregisteret</h1>
+        <a href="Forside.html">
+            <img src="bilder/Home.png" alt="Home" class="home-icon">
+        </a>
+    </div>
+    <div class="container">
+        <div class="profile">
+            <img src="bilder/profil.png" alt="Profile Picture" class="profile-picture">
+            <div class="profile-info">
+                <p>Name</p>
+                <p>Tittel</p>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button class="export-button" id="eksport-data-btn">Eksporter brukerdata</button>
+            <button class="history-button">Se profil historikk</button>
+        </div>
+        <div class="content-container">
+            <div class="info-container">
+                <div class="info-box">
+                    <p id="birthday-date">Fødselsdato 01-01-1990 <a href="#">Endre</a></p>
+                    <p id="address-field">Adresse Særkadenisvein 6, 0369, Oslo <a href="#">Endre</a></p>
+                    <p id="mail-field" >ola.nordmann@habilitet.omnicsoft.com</a></p>
+                    <p id="mobilnr-field">123456789</p>
+                </div>
+                <hr>
+                <div class="info-box">
+                    <p>Nærmeste leder: Kari Nordmann</p>
+                    <p><a href="mailto:kari.nordmann@habilitet.omnicsoft.com">kari.nordmann@habilitet.omnicsoft.com</a></p>
+                    <p>123456789</p>
+                </div>
+            </div>
+            <div class="side-buttons">
+                <a href="Roller.html">
+                    <button type="button" class="roller-button">Roller</button>
+                </a>
+                <a href="Relasjoner.html">
+                    <button type="button" class="relasjoner-button">Relasjoner</button>
+                </a>
+                <a href="Eierinteresser.html">
+                    <button type="button" class="eierinteresser-button">Eierinteresser</button>
+                </a>
+                <a href="Annet.html">
+                    <button type="button" class="annet-button">Annet</button>
+                </a>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="Login.html">
+                <button class="back-button">Tilbake til login</button>
+            </a>
+            <div class="footer-icons">
+                <img src="bilder/BFlag.png" alt="English">
+                <img src="bilder/NFlag.png" alt="Norwegian">
+                <img src="bilder/Speaker.png" alt="Speaker">
+            </div>
+            <img src="bilder/Chat.png" alt="Chat" class="chat-icon">
+        </div>
+    </div>
+    <script>
+        //Felter
+        var birthdayDatePtag = document.getElementById("birthday-date");
+        var adresseField = document.getElementById("address-field");
+        var mailField = document.getElementById("mail-field");
+        var mobilnrField = document.getElementById("mobilnr-field");
+        
+        //bare for å fikse printing av riktig mail i alert(). Fjern i etterkant
+        var mailprint = "ola.nordmann@habilitet.omnicsoft.com"
+        
+        if(localStorage.getItem("email")!= null){
+            mailField.innerHTML = `${localStorage.getItem("email")}`
+            mailprint = localStorage.getItem("email")
+            mobilnrField.innerHTML = `${localStorage.getItem("mobilnr")}`    
+        }
+
+        var EksportBtn = document.getElementById("eksport-data-btn")
+
+        EksportBtn.onclick = function(){
+            alert(`
+            Her vil du få mulighet til å eksportere din brukerdata i form av
+            PDF
+            XLSX
+            DOCX
+            eller lignende.
+
+            Her er din registrerings informasjon:
+            Fult navn: ${localStorage.getItem("fornavn")} ${localStorage.getItem("etternavn")}
+            Adresse: Oslo Gata 123
+            Epost: ${mailprint}
+            Tlf: ${localStorage.getItem("mobilnr")}
+
+            Nærmeste leder:
+            Fult navn: Kari Nordmann
+            Adresse: Oslo Gata 456
+            Epost: kari.nordmann@habilitet.omnicsoft.com
+            Tlf: 987654321
+            `);
+        }
+        //localStorage.clear();
+    </script>
+</body>
+</html>

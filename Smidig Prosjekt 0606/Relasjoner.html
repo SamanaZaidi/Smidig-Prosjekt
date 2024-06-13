@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relasjoner</title>
+    <link rel="stylesheet" href="Relasjoner.css">
+    <link rel="stylesheet" href="timelinecss/timeline.css">
+    <link rel="stylesheet" href="timelinecss/relasjoner_timeline.css">
+</head>
+<body>
+    <h1 class="title">Habilitetsregisteret</h1>
+
+    <article class="timeline-container">
+        <!-- linjen -->
+        <div class="timeline-line"></div>
+        <a href="Eierinteresser.html">
+        <div class="timeline-div" id="eierinteresser">
+            <p class="timeline-p-tag">
+                Eierinteresse
+            </p>
+        </div>
+        </a>
+        <a href="Roller.html">
+        <div class="timeline-div" id="roller">
+            <p class="timeline-p-tag">
+                Roller
+            </p>
+        </div>
+        </a>
+        <a href="Relasjoner.html">
+            <div class="timeline-div" id="relasjoner">
+                <p class="timeline-p-tag">
+                    Relasjoner
+                </p>
+            </div>
+        </a>
+        <a href="Annet.html">
+            <div class="timeline-div" id="annet">
+                <p class="timeline-p-tag">
+                    Annet
+                </p>
+            </div>
+        </a>  
+    </article>
+    <div class="container">
+        <div class="subtitle-container">
+            <h2 class="subtitle">Relasjoner</h2>
+            <div class="tabs">
+                <button class="tab">Nåværende</button>
+                <button class="tab">Tidligere</button>
+                <button class="tab">Søknader</button>
+            </div>
+        </div>
+        <div class="content">
+            <select class="relasjoner-list" multiple id="interest-list">
+                <option>Liste over nåværende relasjoner</option>
+                
+            </select>
+            <a href="RelasjonerSkjema.html">
+                <button class="add-relasjoner">Legg til eksisterende relasjoner</button>
+            </a>
+        </div>
+        <div class="footer">
+            <a href="Roller.html">
+                <button class="back">Tilbake</button>
+            </a>
+            <a href="Annet.html">
+                <button class="next">Neste steg</button>
+            </a>
+        </div>
+        <div class="language-container">
+            <button class="lang-btn"><img src="Bilder/BFlag.png" alt="English"></button>
+            <button class="lang-btn"><img src="Bilder/NFlag.png" alt="Norwegian"></button>
+            <button class="audio-btn"><img src="Bilder/Speaker.png" alt="Audio"></button>
+        </div>
+        <div class="chat-icon">
+            <img src="Bilder/Chat.png" alt="Chat">
+        </div>
+    </div>
+    <div class="home-icon">
+        <a href="Forside.html">
+            <img src="Bilder/Home.png" alt="Home" class="home-icon">
+        </a>
+    </div>
+    <a href="profile.html">
+        <div class="profile-icon">
+            <img src="Bilder/profileimage.webp" alt="profile">
+        </div>
+    </a>
+    <script>
+        /*
+
+        "country" 
+        "org_navn"
+        "org_nr"
+        "stockType"
+        "numberOfStocks"
+        "comments"
+
+        syntax "orgNavn_${localStorage.getItem("list_index")}"
+
+        */
+        
+        function showList(){
+            //                    pass på at dette stemmer
+            document.getElementById("interest-list").innerHTML = "";
+            var i = 0;
+            //             Måtte legge til parseInt til forloopen fordi funksjonen var endret på skjema siden.
+            for(i = 0; i < parseInt(localStorage.getItem("list_index_relasjon")); i++){
+                
+                
+                // Endre på orgName og orgNumber til noe annet relevant 
+                document.getElementById("interest-list").innerHTML += `
+                
+                <option>${localStorage.getItem(`fornavn_relasjon_${i+1}`)}: ${localStorage.getItem(`etternavn_relasjon_${i+1}`)}</option>  
+                `
+              
+            }
+
+        }
+
+        
+
+        //localStorage.clear();
+        showList();
+
+        var tabs = document.getElementsByClassName("tab");
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].onclick = function() {
+                    alert(`Denne funksjonen fungerer ikke i denne prototypen.
+
+                    De vil filtrere listen under etter:
+                    Nåværende, Tidligere og Søknader.
+                    
+                    `);
+                };
+        }
+
+        var chatBtn = document.getElementsByClassName("chat-icon")[0].onclick = function(){
+            alert(`Denne funksjonen fungerer ikke i denne prototypen.
+
+                    Denne knappen vil åpne tjenester som kan være til nytte som:
+                    - Online chat
+                    - FAQ
+                    `);
+        };
+
+        var spraakOgLydKnapper = document.getElementsByClassName("language-container")[0].onclick = function(){
+            alert(`Denne funksjonen fungerer ikke i denne prototypen.
+
+                    Disse knappen vil kunne:
+                    - Endre på språk
+                    - Skru på tale evene for svaksynte
+                    `);
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+ 
+
+
